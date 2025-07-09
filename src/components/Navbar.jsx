@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import './Navbar.css';
+import React, { useEffect, useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { language, changeLanguage, t } = useLanguage();
@@ -12,8 +12,8 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLanguageChange = (newLanguage) => {
@@ -24,58 +24,67 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     } else {
       // For sections that don't have IDs, use querySelector
       const sections = {
-        'home': '.section-top-copy',
-        'about': '.top-section.home.onlyhome.top',
-        'offers': '.section-2',
-        'services': '.section.home',
-        'contact': '.top-section.home.onlyhome'
+        home: ".section-top-copy",
+        about: ".top-section.home.onlyhome.top",
+        offers: ".section-2",
+        services: ".section.home",
+        contact: ".top-section.home.onlyhome",
       };
-      
+
       const targetSection = document.querySelector(sections[sectionId]);
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        targetSection.scrollIntoView({ behavior: "smooth" });
       }
     }
     setIsMobileMenuOpen(false);
   };
 
   return (
-    <div className={`navbar w-nav ${isScrolled ? 'scrolled' : ''}`}>
+    <div className={`navbar w-nav ${isScrolled ? "scrolled" : ""}`}>
       <div className="block-navbar">
         <div className="nav">
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="brand w-nav-brand"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('home');
+              scrollToSection("home");
             }}
           >
-            <img 
-              src="/images/link-expert-logo.webp" 
-              loading="eager" 
-              alt="Link Expert Logo" 
+            <img
+              src="/src/assets/link logo 33.png"
+              loading="eager"
+              alt="Link Expert Logo"
               className="logo menu oud"
             />
           </a>
         </div>
-        
+
         <div className="nav">
-          <div 
+          <div
             className="menu-button w-nav-button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="menu"
           >
             <div className="block-icon-menu">
-              <img src="/images/menu.svg" loading="eager" alt="" className="icon-menu" />
+              <img
+                src="/images/menu.svg"
+                loading="eager"
+                alt=""
+                className="icon-menu"
+              />
             </div>
           </div>
-          
-          <nav className={`nav-menu mob w-nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+
+          <nav
+            className={`nav-menu mob w-nav-menu ${
+              isMobileMenuOpen ? "open" : ""
+            }`}
+          >
             {/* Language Dropdown */}
             <div className="dropdown w-dropdown">
               <div className="nav-link w-dropdown-toggle">
@@ -83,75 +92,75 @@ const Navbar = () => {
                 <div>{language.toUpperCase()}</div>
               </div>
               <nav className="dropdown-list w-dropdown-list">
-                <a 
-                  className="nav-link w-dropdown-link" 
+                <a
+                  className="nav-link w-dropdown-link"
                   href="#"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleLanguageChange(language === 'ar' ? 'en' : 'ar');
+                    handleLanguageChange(language === "ar" ? "en" : "ar");
                   }}
                 >
-                  {language === 'ar' ? 'EN' : 'AR'}
+                  {language === "ar" ? "EN" : "AR"}
                 </a>
               </nav>
             </div>
-            
+
             {/* Navigation Links */}
-            <a 
-              className="nav-link w-nav-link" 
+            <a
+              className="nav-link w-nav-link"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('home');
+                scrollToSection("home");
               }}
             >
-              {t('navbar.home')}
+              {t("navbar.home")}
             </a>
-            
-            <a 
-              className="nav-link w-nav-link" 
+
+            <a
+              className="nav-link w-nav-link"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('about');
+                scrollToSection("about");
               }}
             >
-              {t('navbar.about')}
+              {t("navbar.about")}
             </a>
-            
-            <a 
-              className="nav-link w-nav-link" 
+
+            <a
+              className="nav-link w-nav-link"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('offers');
+                scrollToSection("offers");
               }}
             >
-              {t('navbar.offers')}
+              {t("navbar.offers")}
             </a>
-            
-            <a 
-              className="nav-link w-nav-link" 
+
+            <a
+              className="nav-link w-nav-link"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('services');
+                scrollToSection("services");
               }}
             >
-              {t('navbar.services')}
+              {t("navbar.services")}
             </a>
-            
-            <a 
-              className="nav-link w-nav-link" 
+
+            <a
+              className="nav-link w-nav-link"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('contact');
+                scrollToSection("contact");
               }}
             >
-              {t('navbar.contact')}
+              {t("navbar.contact")}
             </a>
-            
+
             {/* Mobile Language Dropdown */}
             <div className="navbar-wrapper-right mobile">
               <div className="dropdown mob w-dropdown">
@@ -160,42 +169,47 @@ const Navbar = () => {
                   <div className="text-block-12">{language.toUpperCase()}</div>
                 </div>
                 <nav className="dropdown-list w-dropdown-list">
-                  <a 
-                    className="nav-link e new w-dropdown-link" 
+                  <a
+                    className="nav-link e new w-dropdown-link"
                     href="#"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleLanguageChange(language === 'ar' ? 'en' : 'ar');
+                      handleLanguageChange(language === "ar" ? "en" : "ar");
                     }}
                   >
-                    {language === 'ar' ? 'EN' : 'AR'}
+                    {language === "ar" ? "EN" : "AR"}
                   </a>
                 </nav>
               </div>
             </div>
           </nav>
         </div>
-        
+
         <div className="nav mob">
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="brand w-nav-brand"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('home');
+              scrollToSection("home");
             }}
           >
-            <img 
-              src="/images/link-expert-mobile-logo.webp" 
-              loading="eager" 
-              alt="Link Expert Mobile Logo" 
+            <img
+              src="/images/link-expert-mobile-logo.webp"
+              loading="eager"
+              alt="Link Expert Mobile Logo"
               className="logo menu"
             />
           </a>
         </div>
       </div>
-      
-      {isMobileMenuOpen && <div className="w-nav-overlay" onClick={() => setIsMobileMenuOpen(false)}></div>}
+
+      {isMobileMenuOpen && (
+        <div
+          className="w-nav-overlay"
+          onClick={() => setIsMobileMenuOpen(false)}
+        ></div>
+      )}
     </div>
   );
 };

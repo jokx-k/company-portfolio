@@ -33,7 +33,7 @@ const HeroSection = () => {
         <div className="elements">
           <img 
             className={`image-3 ${animationLoaded ? 'animate-in' : ''}`}
-            src="/images/link-expert-logo.webp" 
+            src="/src/assets/link logo 33.png" 
             alt="Link Expert Logo" 
             sizes="(max-width: 479px) 40vw, (max-width: 767px) 25vw, (max-width: 991px) 21vw, 18vw"
             loading="lazy"
