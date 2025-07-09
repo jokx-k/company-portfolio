@@ -1,0 +1,258 @@
+.footer {
+  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+  padding: 80px 0 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.office-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.office-city {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #c9a961;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 2rem;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  background-color: #f0f0f0;
+  transform: translateX(-5px);
+}
+
+.contact-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.contact-value {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.download-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #c9a961 0%, #b8944a 100%);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 50px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
+  background: linear-gradient(135deg, #b8944a 0%, #c9a961 100%);
+}
+
+.office-image-container {
+  position: relative;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.office-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.office-image:hover {
+  transform: scale(1.05);
+}
+
+.office-image-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #c9a961 0%, #8b7355 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.fallback-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.fallback-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.copyright-link {
+  color: #666;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.copyright-link:hover {
+  color: #c9a961;
+}
+
+.links-section {
+  margin-top: 2rem;
+}
+
+.links-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  text-align: start;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-link:hover {
+  color: #c9a961;
+  transform: translateX(-5px);
+}
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
+  .office-grid {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 20px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .office-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .office-image-container {
+    order: -1;
+    height: 250px;
+  }
+
+  .office-city {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .download-buttons {
+    align-items: center;
+  }
+
+  .download-button {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .office-city {
+    font-size: 1.5rem;
+  }
+
+  .contact-label {
+    font-size: 1rem;
+  }
+
+  .contact-value {
+    font-size: 1.1rem;
+  }
+
+  .download-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

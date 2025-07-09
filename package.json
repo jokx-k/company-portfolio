@@ -1,51 +1,33 @@
 {
-  "name": "oud-reserve-portfolio",
+  "name": "react-project",
   "version": "1.0.0",
-  "description": "Luxury real estate company portfolio website for Oud Reserve",
-  "main": "index.html",
+  "description": "A React application",
+  "type": "module",
   "scripts": {
-    "start": "live-server --port=8080 --host=localhost --entry-file=index.html",
-    "dev": "live-server --port=3000 --host=localhost --entry-file=index.html --watch=css,js",
-    "build": "npm run minify-css && npm run minify-js",
-    "minify-css": "cleancss -o css/styles.min.css css/styles.css",
-    "minify-js": "uglifyjs js/main.js -o js/main.min.js",
-    "optimize-images": "imagemin images/**/* --out-dir=images/optimized",
-    "lint-css": "stylelint css/*.css",
-    "lint-js": "eslint js/*.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
-  "keywords": [
-    "real-estate",
-    "luxury",
-    "portfolio",
-    "arabic",
-    "rtl",
-    "responsive",
-    "oud-reserve"
-  ],
-  "author": "Link Expert",
-  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.6.3"
+  },
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "clean-css-cli": "^5.6.2",
-    "uglify-js": "^3.17.4",
-    "imagemin": "^8.0.1",
-    "imagemin-jpeg-recompress": "^7.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "stylelint": "^15.10.3",
-    "eslint": "^8.47.0"
+    "@eslint/js": "^9.0.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "vite": "^5.0.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/oud-reserve-portfolio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/oud-reserve-portfolio/issues"
-  },
-  "homepage": "https://your-username.github.io/oud-reserve-portfolio"
+    "not dead"
+  ]
 }

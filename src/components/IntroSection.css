@@ -1,0 +1,290 @@
+/* Webflow-style Intro Section */
+.top-section {
+  padding: 120px 0;
+  background: #fff;
+}
+
+.w-layout-blockcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid-2-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.col1 {
+  padding-right: 40px;
+}
+
+.col2 {
+  position: relative;
+}
+
+.headingintro {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 30px 0;
+  color: #1a1a1a;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.headingintro.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.div-block-4 {
+  margin-top: 30px;
+}
+
+.paragraph-6 {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.2s;
+}
+
+.paragraph-6.animate-in.delay-1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-section-video-right {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.4s;
+}
+
+.top-section-video-right.animate-in.delay-2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Full-width Image Section */
+.section-top.parttwo {
+  width: 100%;
+  margin: 80px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.6s;
+}
+
+.section-top.parttwo.animate-in.delay-3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-2 {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Text Section */
+.section-2 {
+  padding: 80px 0;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.heading-6 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 40px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.8s;
+}
+
+.heading-6.animate-in.delay-4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elementpart1 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-block.paragrapg {
+  text-align: center;
+}
+
+.paragraphpart1 {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 1s;
+}
+
+.paragraphpart1.animate-in.delay-5 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RTL Support */
+[dir="rtl"] .col1 {
+  padding-right: 0;
+  padding-left: 40px;
+}
+
+[dir="rtl"] .headingintro,
+[dir="rtl"] .paragraph-6,
+[dir="rtl"] .heading-6,
+[dir="rtl"] .paragraphpart1 {
+  text-align: right;
+}
+
+[dir="rtl"] .section-2 {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .grid-2-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .col1 {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .col2 {
+    order: -1;
+  }
+  
+  .headingintro {
+    font-size: 2.8rem;
+  }
+  
+  .paragraph-6 {
+    font-size: 1.1rem;
+  }
+  
+  .heading-6 {
+    font-size: 2.3rem;
+  }
+  
+  .paragraphpart1 {
+    font-size: 1.2rem;
+  }
+  
+  .top-section {
+    padding: 80px 0;
+  }
+  
+  .section-2 {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .w-layout-blockcontainer {
+    padding: 0 15px;
+  }
+  
+  .grid-2-columns {
+    gap: 30px;
+  }
+  
+  .headingintro {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .paragraph-6 {
+    font-size: 1rem;
+  }
+  
+  .heading-6 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .paragraphpart1 {
+    font-size: 1.1rem;
+  }
+  
+  .top-section {
+    padding: 60px 0;
+  }
+  
+  .section-2 {
+    padding: 50px 0;
+  }
+  
+  .section-top.parttwo {
+    margin: 60px 0;
+  }
+  
+  .image-2 {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 479px) {
+  .headingintro {
+    font-size: 1.8rem;
+  }
+  
+  .paragraph-6,
+  .paragraphpart1 {
+    font-size: 0.95rem;
+  }
+  
+  .heading-6 {
+    font-size: 1.7rem;
+  }
+  
+  .top-section {
+    padding: 40px 0;
+  }
+  
+  .section-2 {
+    padding: 40px 0;
+  }
+  
+  .image-2 {
+    height: 30vh;
+  }
+}
+
+[dir="rtl"] .col1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 991px) {
+  [dir="rtl"] .col1 {
+    padding-left: 0;
+    text-align: center;
+  }
+}

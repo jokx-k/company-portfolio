@@ -1,0 +1,266 @@
+/* Webflow-style Hero Section */
+.section-top-copy {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-2-copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.div-block-home {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+  text-align: center;
+  color: white;
+}
+
+.elements {
+  margin-bottom: 40px;
+}
+
+.image-3 {
+  width: auto;
+  height: 120px;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.image-3.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.element2 {
+  margin-bottom: 30px;
+}
+
+.text-block {
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.2s;
+}
+
+.paragraph.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.paragraph-2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.4s;
+}
+
+.paragraph-2.animate-in.delay-1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.element3 {
+  margin-bottom: 40px;
+}
+
+.text-block-2 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.6s;
+}
+
+.text-block-2.animate-in.delay-2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.div-block-2 {
+  margin-bottom: 50px;
+}
+
+.button-2 {
+  display: inline-block;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #c9a961, #e6c878);
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 0.8s;
+}
+
+.button-2:hover {
+  background: linear-gradient(135deg, #e6c878, #c9a961);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+}
+
+.button-2.animate-in.delay-3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button-2.animate-in.delay-3:hover {
+  transform: translateY(-2px);
+}
+
+.elements4 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  transition-delay: 1s;
+}
+
+.elements4.animate-in.delay-4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.div-block-3 {
+  text-align: center;
+}
+
+.text-block-4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.text-block-3 {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* RTL Support */
+[dir="rtl"] .paragraph,
+[dir="rtl"] .paragraph-2,
+[dir="rtl"] .text-block-2,
+[dir="rtl"] .text-block-4,
+[dir="rtl"] .text-block-3 {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .div-block-home {
+    padding: 100px 15px 50px;
+  }
+  
+  .paragraph {
+    font-size: 3rem;
+  }
+  
+  .paragraph-2 {
+    font-size: 2rem;
+  }
+  
+  .text-block-2 {
+    font-size: 1.1rem;
+  }
+  
+  .image-3 {
+    height: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .div-block-home {
+    padding: 80px 15px 40px;
+  }
+  
+  .paragraph {
+    font-size: 2.5rem;
+  }
+  
+  .paragraph-2 {
+    font-size: 1.8rem;
+  }
+  
+  .text-block-2 {
+    font-size: 1rem;
+  }
+  
+  .button-2 {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+  
+  .image-3 {
+    height: 60px;
+  }
+}
+
+@media (max-width: 479px) {
+  .paragraph {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .paragraph-2 {
+    font-size: 1.5rem;
+  }
+  
+  .text-block-2 {
+    font-size: 0.95rem;
+  }
+  
+  .elements {
+    margin-bottom: 30px;
+  }
+  
+  .element2 {
+    margin-bottom: 25px;
+  }
+  
+  .element3 {
+    margin-bottom: 30px;
+  }
+  
+  .div-block-2 {
+    margin-bottom: 40px;
+  }
+}
