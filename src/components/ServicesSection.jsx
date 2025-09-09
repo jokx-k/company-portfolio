@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import './ServicesSection.css';
+import img5657 from '../assets/5657.png';
 
 const ServicesSection = () => {
   const { t } = useLanguage();
@@ -66,7 +67,7 @@ const ServicesSection = () => {
       {/* Background Image Section */}
       <div className={`section-top parttwo ${isVisible ? 'animate-in' : ''}`} ref={sectionRef}>
         <img 
-          src="/images/contact-image.jpg" 
+          src={img5657} 
           loading="lazy" 
           sizes="100vw" 
           alt="Link Expert Services" 

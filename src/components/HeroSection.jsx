@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import './HeroSection.css';
+import img3 from '../assets/3.png';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -23,12 +24,13 @@ const HeroSection = () => {
   return (
     <div className="section-top-copy">
       <img 
-        src="/images/hero-bg.jpg" 
+        src={img3} 
         loading="lazy" 
         sizes="100vw" 
         alt="Link Expert Background" 
         className="image-2-copy"
       />
+      <div className="hero-overlay-filter"></div>
       <div className="div-block-home a">
         <div className="elements">
           <img 
